@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "inmobiliaria-icpe"
+    }
+  },
+  "defaultProject": "inmobiliaria-icpe",
+  "cli": {
+    "analytics": "d0fa7502-32dc-42cd-a675-c2dde1e88740"
+  }
 }
