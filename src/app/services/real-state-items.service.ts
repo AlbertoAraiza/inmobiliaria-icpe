@@ -7,7 +7,7 @@ import { RealStateItem } from '../models/real-state-item';
 })
 export class RealStateItemsService {
   realStateList :AngularFireList<any>;
-  selectedItem :RealStateItem;
+  selectedItem :RealStateItem = new RealStateItem;
   DBNAME = "realstate-item";
 
   constructor(private db :AngularFireDatabase) { }

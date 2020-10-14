@@ -15,21 +15,28 @@
         <div class="modal-body">
           <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
             <div class="form-group">
-                <input type="text" class="form-control" name="address2" #address2="ngModel" [(ngModel)] ="realStateService.selectedItem.address2" placeholder="Colonia">
+                <input type="text" class="form-control" name="address2" #address2="ngModel" [(ngModel)] ="service.selectedItem.address2" placeholder="Colonia" required>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="address1" #address1="ngModel" [(ngModel)] ="realStateService.selectedItem.address1" placeholder="Direccion">
+                <input type="text" class="form-control" name="address1" #address1="ngModel" [(ngModel)] ="service.selectedItem.address1" placeholder="Direccion" required>
             </div>
 
             <div class="form-group">
-                <input type="number" class="form-control" name="price" #price="ngModel" [(ngModel)] ="realStateService.selectedItem.price" placeholder="Precio">
+                <input type="number" class="form-control" name="price" #price="ngModel" [(ngModel)] ="service.selectedItem.price" placeholder="Precio" required>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-secondary" (click)="resetForm(itemForm)" data-dismiss="modal">Cerrar</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="reset" class="btn btn-info" (click)="resetForm(itemForm)">limpiar</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
             </div>
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
