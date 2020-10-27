@@ -15,25 +15,11 @@
             </tr>
             </thead>
             <tbody>
-            <!--<tr *ngFor="let item of realStateItems | async">
-                <th scope="row">{{item}}</th>
-                <td>Priv. Ebano #107</td>
-                <td>{{900000 | currency}}</td>
-                <td><button class="btn btn-info"> <i class="fas fa-edit"></i> </button> </td>
-                <td> <button class="btn btn-danger"> <i class="fas fa-trash"></i> </button> </td>
-            </tr>-->
-            <tr>
-                <th scope="row">Jardines de la Cruz</th>
-                <td>Priv. Ebano #107</td>
-                <td>{{900000 | currency}}</td>
-                <td><button class="btn btn-info"> <i class="fas fa-edit"></i> </button> </td>
-                <td> <button class="btn btn-danger"> <i class="fas fa-trash"></i> </button> </td>
-            </tr>
-            <tr>
-                <th scope="row">Jardines de la Cruz</th>
-                <td>Priv. Ebano #107</td>
-                <td>{{900000 | currency}}</td>
-                <td><button class="btn btn-info"> <i class="fas fa-edit"></i> </button> </td>
+            <tr *ngFor="let item of realStateList">
+                <th scope="row">{{item.address2}}</th>
+                <td>{{item.address1}}</td>
+                <td>{{item.price | currency}}</td>
+                <td> <button class="btn btn-info"> <i class="fas fa-edit"></i> </button> </td>
                 <td> <button class="btn btn-danger"> <i class="fas fa-trash"></i> </button> </td>
             </tr>
             </tbody>

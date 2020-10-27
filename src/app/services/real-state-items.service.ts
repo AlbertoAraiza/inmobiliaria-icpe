@@ -12,7 +12,7 @@ export class RealStateItemsService {
 
   constructor(private db :AngularFireDatabase) { }
 
-  getRealState(){
+  getRealStates(){
     return this.realStateList = this.db.list(this.DBNAME);
   }
 

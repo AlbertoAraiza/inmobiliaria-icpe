@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { $ } from 'protractor';
 import { RealStateItem } from 'src/app/models/real-state-item';
 import { RealStateItemsService } from 'src/app/services/real-state-items.service';
 
@@ -18,13 +17,11 @@ export class NewItemComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.service.getRealState()
   }
 
   onSubmit(form :NgForm){
     this.service.addRealState(form.value);
     this.resetForm(form);
-    $('#newItemModal').modal('hide');
   }
 
   resetForm (form :NgForm){
@@ -32,6 +29,11 @@ export class NewItemComponent implements OnInit {
       form.reset();
       this.service.selectedItem = new RealStateItem()
     }
+  }
+
+  closeModal(button){
+    button.click()
+    console.log(button)
   }
 
 }
